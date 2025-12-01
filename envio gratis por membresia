@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class EnvioGratis {
+
+    public static void main(String[] args) {
+        // Objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // 1. DEFINIR esPremium COMO LOGICO
+        boolean esPremium;
+        // 2. DEFINIR monto COMO REAL
+        double monto;
+
+        // --- ENTRADA DE DATOS ---
+        
+        // 3. ESCRIBIR "¿Tienes membresía Premium? (true/false):"
+        System.out.print("¿Tienes membresía Premium? (true/false): ");
+        // 4. LEER esPremium
+        // Se asume que el usuario ingresará 'true' o 'false'
+        esPremium = scanner.nextBoolean(); 
+
+        // 5. ESCRIBIR "Monto de la compra:"
+        System.out.print("Monto de la compra: ");
+        // 6. LEER monto
+        monto = scanner.nextDouble();
+
+        // 7. SI esPremium O (monto >= 50) ENTONCES
+        // Se utiliza el operador lógico OR (||)
+        if (esPremium || (monto >= 50)) {
+            // 8. ESCRIBIR "Envío gratis."
+            System.out.println("Envío gratis.");
+        } else { // 9. SINO
+            // 10. ESCRIBIR "Envío con costo."
+            System.out.println("Envío con costo.");
+        }
+        // 11. FIN SI
+
+        // Cerrar el objeto Scanner para liberar recursos
+        scanner.close();
+        
+        // 12. FIN
+    }
+}
