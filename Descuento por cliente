@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class DescuentoVIP {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        boolean esVIP;
+        boolean tieneCupon;
+
+        System.out.print("¿Eres VIP? (true/false): ");
+        esVIP = sc.nextBoolean();
+
+        System.out.print("¿Tienes cupón? (true/false): ");
+        tieneCupon = sc.nextBoolean();
+
+        if (esVIP || tieneCupon) {
+            System.out.println("Se aplica descuento.");
+        } else {
+            System.out.println("Precio regular.");
+        }
+
+        sc.close();
+    }
+}
