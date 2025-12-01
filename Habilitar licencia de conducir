@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class HabilitarLicencia {
+
+    public static void main(String[] args) {
+        // Objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // 1. DEFINIR edad COMO ENTERO (int)
+        int edad;
+        // 2. DEFINIR aproboExamen COMO LOGICO (boolean)
+        boolean aproboExamen;
+
+        // --- ENTRADA DE DATOS: Edad ---
+        
+        // 3. ESCRIBIR "Edad:"
+        System.out.print("Edad: ");
+        // 4. LEER edad
+        // Se asume que el usuario ingresará un número entero
+        edad = scanner.nextInt(); 
+
+        // --- ENTRADA DE DATOS: Examen ---
+
+        // 5. ESCRIBIR "¿Aprobó examen teórico? (true/false):"
+        System.out.print("¿Aprobó examen teórico? (true/false): ");
+        // 6. LEER aproboExamen
+        // Se asume que el usuario ingresará 'true' o 'false'
+        aproboExamen = scanner.nextBoolean(); 
+
+        // --- LÓGICA DE LICENCIA ---
+        
+        // 7. SI edad >= 16 Y aproboExamen ENTONCES
+        // Se utiliza el operador lógico AND (&&)
+        if (edad >= 16 && aproboExamen) {
+            // 8. ESCRIBIR "Licencia habilitada."
+            System.out.println("Licencia habilitada.");
+        } else { // 9. SINO
+            // 10. ESCRIBIR "No cumple los requisitos."
+            System.out.println("No cumple los requisitos.");
+        }
+        // 11. FIN SI
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+        
+        // 12. FIN
+    }
+}
