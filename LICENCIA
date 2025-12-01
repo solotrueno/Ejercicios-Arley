@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class VerificacionLicencia {
+
+    public static void main(String[] args) {
+        // Objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // 1. DEFINIR tieneLicencia COMO LOGICO (boolean)
+        boolean tieneLicencia;
+        // 2. DEFINIR estaVigente COMO LOGICO (boolean)
+        boolean estaVigente;
+        // 3. DEFINIR cumpleCategoria COMO LOGICO (boolean)
+        boolean cumpleCategoria;
+
+        // --- ENTRADA DE DATOS ---
+
+        System.out.println("--- Verificación de Licencia ---");
+        
+        System.out.print("¿Tiene licencia de conducir? (true/false): ");
+        tieneLicencia = scanner.nextBoolean();
+
+        System.out.print("¿La licencia está vigente? (true/false): ");
+        estaVigente = scanner.nextBoolean();
+
+        System.out.print("¿Cumple con la categoría requerida? (true/false): ");
+        cumpleCategoria = scanner.nextBoolean();
+
+        // --- LÓGICA DE EXCLUSIÓN ---
+        
+        // El pseudocódigo usa una lógica de exclusión: si *falla* la primera
+        // condición, se detiene y dice "No puede aplicar". Solo si pasa todas
+        // las verificaciones, llega al final para el "Puede aplicar".
+
+        // 4. SI NO tieneLicencia ENTONCES
+        // Se usa el operador de negación (!) en Java
+        if (!tieneLicencia) { 
+            System.out.println("No puede aplicar (Debe tener licencia).");
+        
+        // 5. SINO SI NO estaVigente ENTONCES
+        } else if (!estaVigente) {
+            System.out.println("No puede aplicar (La licencia debe estar vigente).");
+            
+        // 6. SINO SI NO cumpleCategoria ENTONCES
+        } else if (!cumpleCategoria) {
+            System.out.println("No puede aplicar (No cumple la categoría requerida).");
+            
+        // 7. SINO
+        // Si no falló en ninguna de las verificaciones anteriores, es elegible.
+        } else {
+            System.out.println("Puede aplicar a la vacante.");
+        }
+        // 8. FIN SI
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+    }
+}
