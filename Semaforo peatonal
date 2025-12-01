@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class SemaforoPeatonal {
+
+    public static void main(String[] args) {
+        // Objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // 1. DEFINIR color COMO CADENA (String)
+        String color;
+
+        // --- ENTRADA DE DATOS ---
+        
+        // 2. ESCRIBIR "Color del semáforo (rojo/amarillo/verde):"
+        System.out.print("Color del semáforo (rojo/amarillo/verde): ");
+        
+        // 3. LEER color
+        color = scanner.nextLine(); 
+
+        // --- LÓGICA DEL SEMÁFORO ---
+        
+        // ¡IMPORTANTE EN JAVA! Usamos .equalsIgnoreCase() para que no importe 
+        // si el usuario ingresa Rojo, ROJO o rojo.
+
+        // 4. SI color == "rojo" ENTONCES
+        if (color.equalsIgnoreCase("rojo")) { 
+            // 5. ESCRIBIR "Detente."
+            System.out.println("Detente.");
+        
+        // 6. SINO SI color == "amarillo" ENTONCES
+        } else if (color.equalsIgnoreCase("amarillo")) {
+            // 7. ESCRIBIR "Precaución."
+            System.out.println("Precaución.");
+            
+        // 8. SINO SI color == "verde" ENTONCES
+        } else if (color.equalsIgnoreCase("verde")) {
+            // 9. ESCRIBIR "Avanza."
+            System.out.println("Avanza.");
+            
+        // 10. SINO
+        // Si el valor ingresado no coincide con ninguno de los anteriores
+        } else {
+            // 11. ESCRIBIR "Color no reconocido."
+            System.out.println("Color no reconocido.");
+        }
+        // 12. FIN SI
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+        
+        // 13. FIN
+    }
+}
