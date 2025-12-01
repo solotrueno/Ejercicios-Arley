@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class ClasificadorTemperatura {
+
+    public static void main(String[] args) {
+        // Objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // 1. DEFINIR temp COMO REAL (double)
+        double temp;
+
+        // --- ENTRADA DE DATOS ---
+        
+        // 2. ESCRIBIR "Temperatura en °C:"
+        System.out.print("Temperatura en °C: ");
+        
+        // 3. LEER temp
+        temp = scanner.nextDouble(); 
+
+        // --- LÓGICA DE CLASIFICACIÓN ---
+        
+        // 4. SI temp < 10 ENTONCES
+        if (temp < 10) {
+            // 5. ESCRIBIR "Frío"
+            System.out.println("Frío");
+        
+        // 6. SINO SI temp <= 25 ENTONCES
+        // Este bloque se evalúa solo si la temperatura NO es menor a 10.
+        // Es decir, si (temp >= 10 Y temp <= 25)
+        } else if (temp <= 25) {
+            // 7. ESCRIBIR "Agradable"
+            System.out.println("Agradable");
+            
+        // 8. SINO
+        // Este bloque se ejecuta si la temperatura NO es < 10 Y NO es <= 25.
+        // Es decir, si (temp > 25)
+        } else {
+            // 9. ESCRIBIR "Caluroso"
+            System.out.println("Caluroso");
+        }
+        // 10. FIN SI (equivale a la estructura if-else if-else)
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+        
+        // 11. FIN
+    }
+}
