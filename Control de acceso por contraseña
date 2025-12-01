@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class ControlAcceso {
+
+    // Contraseña correcta predefinida
+    private static final String CLAVE_CORRECTA = "secreto123";
+
+    public static void main(String[] args) {
+        // Objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // 1. DEFINIR claveCorrecta COMO CADENA <- "secreto123"
+        // (Se ha definido como constante CLAVE_CORRECTA arriba)
+        
+        // 2. DEFINIR claveIngresada COMO CADENA
+        String claveIngresada;
+
+        // --- ENTRADA DE DATOS ---
+        
+        // 3. ESCRIBIR "Ingresa la contraseña:"
+        System.out.print("Ingresa la contraseña: ");
+        
+        // 4. LEER claveIngresada
+        claveIngresada = scanner.nextLine(); // Leemos la línea completa
+
+        // --- LÓGICA DE COMPARACIÓN ---
+        
+        // 5. SI claveIngresada == claveCorrecta ENTONCES
+        // ¡IMPORTANTE EN JAVA! Para comparar el *contenido* de dos Strings,
+        // siempre se debe usar el método .equals() en lugar de ==.
+        if (claveIngresada.equals(CLAVE_CORRECTA)) {
+            // 6. ESCRIBIR "Acceso concedido."
+            System.out.println("Acceso concedido.");
+        } else { // 7. SINO
+            // 8. ESCRIBIR "Acceso denegado."
+            System.out.println("Acceso denegado.");
+        }
+        // 9. FIN SI
+
+        // Cerrar el objeto Scanner
+        scanner.close();
+        
+        // 10. FIN
+    }
+}
